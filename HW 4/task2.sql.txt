@@ -1,0 +1,32 @@
+-- 1. Insert event for Fluffy
+INSERT INTO petEvent (petname, eventdate, eventtype, remark)
+VALUES ('Fluffy', '2020-10-15', 'vet', 'antibiotics');
+
+-- 2. Insert Hammy into petPet and create an event for Hammy
+INSERT INTO petPet (petname, owner, species, gender, birth, death)
+VALUES ('Hammy', 'Diane', 'hamster', 'M', '2010-10-30', NULL);
+
+INSERT INTO petEvent (petname, eventdate, eventtype, remark)
+VALUES ('Hammy', '2020-10-15', 'vet', 'antibiotics');
+
+-- 3. Update information that Fluffy had 5 kittens (2 male)
+-- Add the kittens to the database
+INSERT INTO petPet (petname, owner, species, gender, birth)
+VALUES ('Kitten1', 'Fluffy', 'cat', 'M', '2020-10-15'),
+       ('Kitten2', 'Fluffy', 'cat', 'M', '2020-10-15'),
+       ('Kitten3', 'Fluffy', 'cat', 'F', '2020-10-15'),
+       ('Kitten4', 'Fluffy', 'cat', 'F', '2020-10-15'),
+       ('Kitten5', 'Fluffy', 'cat', 'F', '2020-10-15');
+
+-- 4. Record that Claws broke the rib on 1997-08-03
+INSERT INTO petEvent (petname, eventdate, eventtype, remark)
+VALUES ('Claws', '1997-08-03', 'injury', 'broke the rib');
+
+-- 5. Update Puffball's death information
+UPDATE petPet
+SET death = '2020-09-01'
+WHERE petname = 'Puffball';
+
+-- 6. Remove Harold's dog due to GDPR
+DELETE FROM petPet
+WHERE owner = 'Harold';
