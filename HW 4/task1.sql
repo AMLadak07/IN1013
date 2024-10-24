@@ -1,14 +1,14 @@
 -- Drop the database if it exists
-DROP DATABASE IF EXISTS pet_database;
+--DROP DATABASE IF EXISTS pet_database;
 
 -- Create a new database
-CREATE DATABASE pet_database;
+--CREATE DATABASE pet_database;
 
 -- Use the newly created database
-USE pet_database;
+--USE pet_database;
 
 -- Drop the tables if they exist
-DROP TABLE IF EXISTS petPet, petEvent;
+--DROP TABLE IF EXISTS petPet, petEvent;
 
 -- Create petPet table
 CREATE TABLE petPet (
