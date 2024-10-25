@@ -57,4 +57,5 @@ WHERE petname = 'Puffball';
 
 -- 6. Remove Harold's dog due to GDPR
 DELETE FROM petPet
-WHERE owner = 'Harold';
+WHERE owner = 'Harold'
+AND species = 'dog';
