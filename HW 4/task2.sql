@@ -56,6 +56,15 @@ SET death = '2020-09-01'
 WHERE petname = 'Puffball';
 
 -- 6. Remove Harold's dog due to GDPR
+ALTER TABLE petEvent
+DROP FOREIGN KEY petevent_ibfk_1;
+
+ALTER TABLE petEvent
+ADD CONSTRAINT fk_petname
+FOREIGN KEY (petname) REFERENCES petPet(petname)
+ON DELETE CASCADE;
+
 DELETE FROM petPet
-WHERE owner = 'Harold'
-AND species = 'dog';
+WHERE owner = 'Harold' AND species = 'dog';
+
+
